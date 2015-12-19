@@ -81,16 +81,20 @@ h3{
 	font-weight:400;
 }
 h6{
-	font-size:16px;
+	font-size:19px;
 	color:#888888;
 	font-family: 'Open Sans', sans-serif;
 	font-weight:400;
 	text-align:center;
-	margin:0 0 60px 0;
+	margin:0 0 70px 0;
 }
 p{
 	line-height:24px;
 	margin:0;
+}
+
+#service p {
+	font-size: 15px;
 }
 
 /* Header Styles
@@ -354,12 +358,14 @@ color: #fff;
 	text-decoration:none;
 }
 
-.portfolioContainer{
+.portfolioContainer,
+.tools-container {
 	margin:0 auto;
 	padding-left:15px;
 }
 
-.Portfolio-box{
+.Portfolio-box,
+.tools-box {
 	text-align:center;
 	margin-bottom:30px;
 	height:350px;
@@ -368,14 +374,16 @@ color: #fff;
 	float:left;
 	padding:0;
 }
-.Portfolio-box img{
+.Portfolio-box img,
+.tools-box img {
 	margin-bottom:25px;
 	transition:all 0.3s ease-in-out;
 	-moz-transition:all 0.3s ease-in-out;
 	-webkit-transition:all 0.3s ease-in-out;	
 }
 
-.Portfolio-box img:hover {
+.Portfolio-box img:hover,
+.tools-box img:hover {
 	opacity: 0.6;
 }
 
@@ -803,7 +811,8 @@ border: 2px solid #fff;
 	color: #7cc576 !important;
 }
 
-.portfolioContainer{
+.portfolioContainer,
+.tools-container {
 	max-width: 1140px;
 }
 
@@ -909,4 +918,14 @@ border: 2px solid #fff;
 }
 .overview-container {
 	overflow: hidden;
+}
+.tools-box img {
+	min-height: 262px;
+	max-height: 262px;
+}
+.services {
+	text-align: center;
+}
+.services img {
+	width: 75%;
 }
