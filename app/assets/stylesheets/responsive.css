@@ -72,6 +72,9 @@
 	.navbar-toggle {
 		margin-top: 18px;
 	}
+	.navbar-header > .navbar-brand {
+		margin-top: 0px !important;
+	}
 }
 
 @media only screen and (max-width: 479px) {
@@ -89,5 +92,8 @@
 	}
 	.navbar-toggle {
 		margin-top: 18px;
+	}
+	.navbar-header > .navbar-brand {
+		margin-top: 0px !important;
 	}
 }

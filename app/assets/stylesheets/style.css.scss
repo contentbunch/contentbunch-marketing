@@ -108,7 +108,7 @@ p{
 	padding:280px 0;
 }
 .logo{
-	width:130px;
+	width: 340px;
 	margin:0 auto 35px;
 }
 .header h1{
@@ -771,7 +771,7 @@ border: 2px solid #fff;
 }
 .footer-logo{
 	margin:15px auto 35px;
-	width: 76px;
+	width: 230px;
 }
 .copyright{
 	color:#cccccc;
@@ -879,6 +879,7 @@ border: 2px solid #fff;
   -webkit-transition: padding .2s ease-in;
   -moz-transition: padding .2s ease-in;
   transition: padding .2s ease-in;
+  margin-top: 20px;
 }
 
 .navbar-header > .navbar-brand:hover,
