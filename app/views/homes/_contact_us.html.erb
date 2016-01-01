@@ -5,16 +5,15 @@
 </section>
 <div class='container'>
   <section class='main-section contact'>
-
     <div class='row'>
       <div class='col-lg-6 col-sm-7 wow fadeInLeft'>
         <div class='contact-info-box address clearfix'>
           <h3><i class='icon-map-marker'></i>Address:</h3>
-          <span>308 address Lane<br>Pakistan, Lahore 87111.</span>
+          <span>P-97, 98 Saddiq Trade Center Lahore, Pakistan</span>
         </div>
         <div class='contact-info-box phone clearfix'>
           <h3><i class='fa-phone'></i>Phone:</h3>
-          <span>0092-0333-3333333</span>
+          <span>0092-0324-5012250</span>
         </div>
         <div class='contact-info-box email clearfix'>
           <h3><i class='fa-pencil'></i>email:</h3>
@@ -26,19 +25,20 @@
         </div>
         <ul class='social-link'>
           <li class='twitter'><a href='#'><i class='fa-twitter'></i></a></li>
-          <li class='facebook'><a href='#'><i class='fa-facebook'></i></a></li>
+          <li class='facebook'><a href='https://www.facebook.com/Content-Bunch-1648143405443109'><i class='fa-facebook'></i></a></li>
           <li class='pinterest'><a href='#'><i class='fa-pinterest'></i></a></li>
           <li class='gplus'><a href='#'><i class='fa-google-plus'></i></a></li>
           <li class='dribbble'><a href='#'><i class='fa-dribbble'></i></a></li>
         </ul>
       </div>
       <div class='col-lg-6 col-sm-5 wow fadeInUp delay-05s'>
-        <div class='form'>
-          <input class='input-text' type='text' name='' value='Your Name *' onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;">
-          <input class='input-text' type='text' name='' value='Your E-mail *' onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;">
-          <textarea class='input-text text-area' cols='0' rows='0' onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;">Your Message *</textarea>
-          <input class='input-btn' type='submit' value='send message'>
-        </div>
+        <%= form_for Contact.new, remote: true, html: { class: 'form' } do |f| %>
+          <%= f.text_field :name, placeholder: 'Your Name *', required: true, class: 'input-text' %>
+          <%= f.email_field :email, placeholder: 'Your E-mail *', required: true, class: 'input-text' %>
+          <%= f.text_area :message, placeholder: 'Your Message *', required: true, class: 'input-text text-area' %>
+          <%= f.submit 'Send message', class: 'input-btn',"data-disable-with" => 'Please wait...' %>
+          <div class='contact-us-success hidden'>Message sent!. We will contact back to you.</div>
+        <% end %>
       </div>
     </div>
   </section>
