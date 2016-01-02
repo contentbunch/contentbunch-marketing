@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151231191245) do
+ActiveRecord::Schema.define(version: 20160102121021) do
 
   create_table "contacts", force: :cascade do |t|
     t.string   "name",       limit: 70
@@ -20,6 +20,14 @@ ActiveRecord::Schema.define(version: 20151231191245) do
     t.boolean  "is_read",                  default: false
     t.datetime "created_at",                               null: false
     t.datetime "updated_at",                               null: false
+  end
+
+  create_table "tools", force: :cascade do |t|
+    t.string   "slug",       limit: 255
+    t.string   "link",       limit: 255
+    t.text     "embed_code", limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
 end

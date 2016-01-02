@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   root 'homes#index'
 
   resources :contacts, only: [:create]
+
+  get '/:slug' => 'tools#embed_view', as: :tool
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
